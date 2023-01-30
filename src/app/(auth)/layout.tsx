@@ -1,6 +1,6 @@
+import GlassPane from '../../../components/GlassPane'
 import '@/styles/global.css'
 import { Inter } from '@next/font/google'
-import Glasspane from 'components/Glasspane'
 import { PropsWithChildren } from 'react'
 
 const inter = Inter({
@@ -8,17 +8,15 @@ const inter = Inter({
   subsets: ['latin']
 })
 
-const AuthRootLayout = ({ children }: PropsWithChildren) => {
+export default function AuthRootLayout({ children }: PropsWithChildren) {
   return (
     <html lang='en' className={inter.variable}>
       <head />
-      <body className='h-screen w-screen rainbow-mesh p-6'>
-        <Glasspane classname='w-full h-full flex items-center justify-center'>
+      <body className='h-100 w-screen rainbow-mesh p-6'>
+        <GlassPane className='w-full h-full flex items-center justify-center'>
           {children}
-        </Glasspane>
+        </GlassPane>
       </body>
     </html>
   )
 }
-
-export default AuthRootLayout

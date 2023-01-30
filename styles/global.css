@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+body, html {
+  @apply h-full
+}
+
+body, html {
+  @apply p-6
+}
+
 @layer base {
   [data-nextjs-scroll-focus-boundary] {
     display: contents;

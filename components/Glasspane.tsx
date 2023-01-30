@@ -1,17 +1,17 @@
-import React, { PropsWithChildren } from 'react'
 import clsx from 'clsx'
+import { PropsWithChildren } from 'react'
 
-const Glasspane = ({
+const GlassPane = ({
   children,
-  classname
+  className
 }: PropsWithChildren<{
-  classname: string
+  className: string
 }>) => {
   return (
     <div
       className={clsx(
         'glass rounded-2xl border-solid border-2 border-gray-200',
-        classname
+        className
       )}
     >
       {children}
@@ -19,4 +19,4 @@ const Glasspane = ({
   )
 }
 
-export default Glasspane
+export default GlassPane
