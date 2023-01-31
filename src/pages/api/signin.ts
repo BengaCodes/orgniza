@@ -32,13 +32,13 @@ export default async function signin(
         })
       )
       res.status(201)
-      res.end()
+      res.end(JSON.stringify({ message: `Welcome back ${user?.firstName}` }))
     } else {
       res.status(401)
       res.json({ error: 'Invalid login' })
     }
   } else {
     res.status(402)
-    res.end()
+    res.end({ error: 'Invalid Credentials' })
   }
 }
